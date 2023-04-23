@@ -23,7 +23,7 @@ export default function Home() {
     const url = 'https://api.openai.com/v1/chat/completions';
     const headers = {
       'Content-type': "application/json",
-      'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`
+      'Authorization': `Bearer ${process.env.NEXT_PUBLIC_OPENAI_API_KEY}`
     }
 
     const data = {
@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <div className="container mx-auto max-w-full">
       <div className='flex flex-col h-screen  overflow-y-scroll bg-gray-900'>
-        <div className='bg-gray-900 fixed top-0 left-5 right-5'>
+        <div className='bg-gray-900 fixed top-0 left-1/3'>
           <h1 className='bg-gradient-to-r from-blue-500 to-purple-500 text-transparent
         bg-clip-text text-center py-3 font-bold text-6xl'>Chatgpt</h1>
         </div>
