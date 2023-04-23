@@ -19,7 +19,7 @@ export default function Home() {
 
     setInputValue('');
   }
-  const sendMessage = async (message) => {
+  const sendMessage = (message) => {
     const url = '/api/chat';
 
     const data = {
@@ -28,7 +28,7 @@ export default function Home() {
     };
     setIsLoading(true)
 
-    await axios.post(url, data)
+    axios.post(url, data)
       .then((res) => {
         // console.log(res)
         setChatLog((prevChatLog) => [...prevChatLog, { type: 'bot', message: res.data.choices[0].message.content }]);
